@@ -1,14 +1,14 @@
-<!doctype html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Application Response</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block page_name %}
+    Thanks for applying
+{% endblock %}
+
+{% block content %}
     <p>
         Thank you, {{applicant_name}}, for applying to be a
         {{applicant_position}}. Your minimum salary requirement is 
         {{salary_requirement}} dollars.
     </p>
-</body>
-</html>
+{% endblock %}
+

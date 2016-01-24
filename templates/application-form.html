@@ -1,24 +1,23 @@
-<!doctype html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Skills-Web</title>
-    <link rel="stylesheet" href="/static/styles.css">
-</head>
-<body>
-        <h1>Ubermelon application</h1>
-        <p>If you are interested in employment at ubermelon please fill out the form
-            below. Please remember to fill in all the provided fields. If you are
-            interested in more than one position please submit multiple forms.
-        </p>
-        <form action="/application" method="post">
-            <label>First name: <input type="text" name="first-name"></label><br>
-            <label>Last name: <input type="text" name="last-name"></label><br>
-            <label>Required salery: <input type="number" name="required-salery"></label><br>
-            <div>Desired position:</div>
-            <label><input type="radio" name="job-title" value="software engineer">Software Engineer</label><br>
-            <label><input type="radio" name="job-title" value="QA engineer">QA Engineer</label><br>
-            <label><input type="radio" name="job-title" value="project manager">Product Manager</label><br>
-            <input type="submit">
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block page_name %}
+    Apply here
+{% endblock %}
+
+{% block content %}
+    <h1>Ubermelon application</h1>
+    <p>If you are interested in employment at ubermelon please fill out the form
+        below. Please remember to fill in all the provided fields. If you are
+        interested in more than one position please submit multiple forms.
+    </p>
+    <form action="/application" method="post">
+        <label>First name: <input type="text" name="first-name"></label><br>
+        <label>Last name: <input type="text" name="last-name"></label><br>
+        <label>Required salery: <input type="number" name="required-salery"></label><br>
+        <div>Desired position:</div>
+        <label><input type="radio" name="job-title" value="software engineer">Software Engineer</label><br>
+        <label><input type="radio" name="job-title" value="QA engineer">QA Engineer</label><br>
+        <label><input type="radio" name="job-title" value="project manager">Product Manager</label><br>
+        <input type="submit">
+    </form>
+{% endblock %}
